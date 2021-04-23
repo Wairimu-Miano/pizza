@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="css/styles2.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="js/scripts.js"></script>
+    <title>ORDER</title>
+  </head>
+  <body>
+    <div class="container-fluid" id="intro">
+      <h1>PIZZA PEDDLER!</h1>
+      <p></p>
+    </div>
+    <div class="container-fluid row">
+      <div class="col-md-3">
+        <div class="card" id="hours">
+          <p>WORKING HOURS</p>
+          <ul>
+            We are open for the following hours:
+            <li>Monday-Friday: 8:00am-9:00pm</li>
+            <li>Saturdays: 7:00am-11:00pm</li>
+            <li>Sundays & Holidays: 10:00am-7:00pm</li>
+          </ul>
+        </div>
+        <br>
+        <div class="card" id="pizza-chart">
+          <p class="card-header">A chart to help you pick out pizza sizes</p>
+          <img src="images/pizza-sizes.png" alt="" width="240" height="280">
+        </div>
+      </div>
+      <div class="col-md-5">
+        <p>Place your order details below</p>
+        <form class="pizza-old">
+          <div id="size">
+            <p>PIZZA SIZE:</p>
+            <div class="form-check-inline">
+              <input type="radio" id="small" name="size" value="small" class="form-check-input" required>
+              <label for="small" class="form-check-label">Small</label>
+            </div>
+            <div class="form-check-inline">
+              <input type="radio" id="medium" name="size" value="medium" class="form-check-input" required>
+              <label for="medium" class="form-check-label">Medium</label>
+            </div>
+            <div class="form-check-inline">
+              <input type="radio" id="large" name="size" value="large" class="form-check-input" required>
+              <label for="large" class="form-check-label">Large</label>
+            </div>
+          </div>
+          <div id="crust">
+            <p>CRUST TYPE:</p>
+            <select class="form-select form-select-sm crust-type">
+              <option selected>Select one:</option>
+              <option>CRUSTY</option>
+              <option>STUFFED</option>
+              <option>GLUTTEN-FREE</option>
+            </select>
+          </div>
+          <div id="flavor">
+            <p>CHOOSE A FLAVOR:</p>
+            <select class="form-select form-select-sm flavor-type">
+              <option>MEAT DELUXE</option>
+              <option>BBQ CHICKEN</option>
+              <option>CHICKEN TIKKA</option>
+              <option>PEPPERONI PASSION</option>
+              <option>HAWAIIAN</option>
+              <option>VEGGIE DELUXE</option>
+              <option>CHICKEN BALI</option>
+              <option>REGINA</option>
+              <option>PERI-PERI CHICKEN</option>
+              <option>SWAHILI CHICKEN</option>
+            </select>
+          </div>
+          <br>
+          <div id="toppings">
+            <div class="card">
+              <p class="card-header">CHOOSE YOUR TOPPINGS HERE</p>
+              <div class="card-body form-check">
+                <div class="form-check">
+                  <input type="checkbox" id="topping1" name="onions" class="form-check-input" >
+                  <label for="topping1" class="form-check-label">Onions</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" id="topping2" name="tomatoes" class="form-check-input">
+                  <label for="topping2" class="form-check-label">Diced Tomatoes</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" id="topping3" name="Peppers" class="form-check-input">
+                  <label for="topping3" class="form-check-label">Mixed Peppers</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" id="topping4" name="olives" class="form-check-input">
+                  <label for="topping4" class="form-check-label">Black Olives</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" id="topping5" name="pineapples" class="form-check-input">
+                  <label for="topping5" class="form-check-label">Pineapples</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" id="topping6" name="Cheese" class="form-check-input">
+                  <label for="topping6" class="form-check-label">Extra Cheese</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" id="topping7" name="mushrooms" class="form-check-input">
+                  <label for="topping7" class="form-check-label">Fresh Mushrooms</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" id="topping8" name="steak" class="form-check-input">
+                  <label for="topping8" class="form-check-label">Steak</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" id="topping9" name="chicken" class="form-check-input" >
+                  <label for="topping9" class="form-check-label">Grilled Chicken</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" id="topping10" name="sausage" class="form-check-input">
+                  <label for="topping10" class="form-check-label">Italian Sausages</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" id="topping11" name="beef" class="form-check-input">
+                  <label for="topping11" class="form-check-label">Beef</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" id="topping12" name="ham" class="form-check-input">
+                  <label for="topping12" class="form-check-label">Beef Ham</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" id="topping13" name="jalapeno" class="form-check-input">
+                  <label for="topping13" class="form-check-label">Jalapeno Peppers</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" id="topping14" name="bacon" class="form-check-input">
+                  <label for="topping14" class="form-check-label">Beef Bacon</label>
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" id="topping15" name="pepperoni" class="form-check-input">
+                  <label for="topping15" class="form-check-label">Pepperoni</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="quantity">
+            <p>HOW MANY PIZZAS:</p>
+            <input id="number-pizzas" type="number" class="form-control" placeholder="How many?">
+          </div>
+          <br>
+          <div class="d-grid gap-3 d-md-block">
+            <button type="button" class="btn btn-outline-danger" id="add-order">Add an Order</button>
+            <input type="submit" class="btn btn-outline-danger"  id="submit" value="Submit">
+            <input type="reset" class="btn btn-outline-danger" value="Reset">
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

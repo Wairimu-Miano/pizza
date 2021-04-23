@@ -1,3 +1,4 @@
+
 #hours{
   text-align:center;
 }
@@ -20,13 +21,9 @@ h2{
   color:#dc3545;
 }
 .pizza-old{
-  height:500px;
+  height:400px;
   overflow:scroll;
   text-align:center;
-}
-#menu-list{
-  height:500px;
-  overflow:scroll;
 }
 figure p{
   display:none;
@@ -39,10 +36,33 @@ figcaption{
   font-weight:bold;
   text-decoration:underline;
 }
-#menu-list card:hover{
 
-}
 .note{
   font-size:80%;
   color:red;
+}
+#toppings{
+  text-align:center;
+}
+.cost-toppings li{
+  list-style-type:none;
+}
+.cost-toppings p{
+  border-bottom:1px solid #dc3545;
+}
+#contacts{
+  text-align:center;
+  background-color:#dc3545;
+  color:white;
+}
+figure{
+  padding:2px;
+  margin:15px;
+}
+#offer-delivery{
+  text-align:center;
+  padding:30px;
+}
+#menu{
+  text-align:center;
 }

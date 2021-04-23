@@ -25,6 +25,10 @@
 #order:hover{
   text-decoration:underline;
 }
+#offers{
+  text-align:center;
+  padding-top:20px;
+}
 #about{
   text-align:center;
   padding-top:20px;

@@ -25,3 +25,7 @@
 #order:hover{
   text-decoration:underline;
 }
+#about{
+  text-align:center;
+  padding-top:20px;
+}

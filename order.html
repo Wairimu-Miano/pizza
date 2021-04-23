@@ -11,28 +11,12 @@
   <body>
     <div class="container-fluid" id="intro">
       <h1>PIZZA PEDDLER!</h1>
-      <p></p>
+      <p style="text-decoration:underline;">Beep Beep, Hot Pizza Coming Through!</p>
     </div>
     <div class="container-fluid row">
-      <div class="col-md-3">
-        <div class="card" id="hours">
-          <p>WORKING HOURS</p>
-          <ul>
-            We are open for the following hours:
-            <li>Monday-Friday: 8:00am-9:00pm</li>
-            <li>Saturdays: 7:00am-11:00pm</li>
-            <li>Sundays & Holidays: 10:00am-7:00pm</li>
-          </ul>
-        </div>
-        <br>
-        <div class="card" id="pizza-chart">
-          <p class="card-header">A chart to help you pick out pizza sizes</p>
-          <img src="images/pizza-sizes.png" alt="" width="240" height="280">
-        </div>
-      </div>
-      <div class="col-md-5">
-        <p>Place your order details below</p>
-        <form class="pizza-old">
+      <div class="col-md-7" id="pizza-form">
+        <h2>Place your order details below</h2>
+        <form class="pizza-old card">
           <div id="size">
             <p>PIZZA SIZE:</p>
             <div class="form-check-inline">
@@ -151,6 +135,77 @@
             <input type="reset" class="btn btn-outline-danger" value="Reset">
           </div>
         </form>
+      </div>
+      <div class="col-md-2">
+        <div class="card" id="hours">
+          <p>WORKING HOURS</p>
+          <ul>
+            We are open for the following hours:
+            <li>Mon-Fri: 8:00am-9:00pm</li>
+            <li>Sat: 7:00am-11:00pm</li>
+            <li>Sun: 10:00am-7:00pm</li>
+          </ul>
+        </div>
+        <br>
+        <div class="card" id="pizza-chart">
+          <p class="card-header">A chart to help you pick out pizza sizes</p>
+          <img src="images/pizza-sizes.png" alt="" width="100px" height="120px" id="chart-img">
+        </div>
+      </div>
+      <div class="col-md-3" id="menu">
+        <h2>OUR MENU</h2>
+        <div class="card-deck" id="menu-list">
+          <figure>
+            <figcaption>MEAT DELUXE</figcaption>
+            <img src="images/pizzas/bbq-chicken.jpeg" width="100%" height="80%">
+            <p><span>CONTAINS:</span><br>BBQ Steak Strips, Italian Sausage, Pepperoni, Fresh Mushrooms, Onions & Mozzarella Cheese</p>
+          </figure>
+          <figure class="card">
+            <figcaption>BBQ CHICKEN</figcaption>
+            <img src="images/pizzas/bbq-chicken.jpeg" width="100%" height="80%">
+            <p><span>CONTAINS:</span><br>Grilled Chicken, Red Onions, Sweet Corn & BBQ Sauce</p>
+          </figure>
+          <figure class="card">
+            <figcaption>CHICKEN TIKKA</figcaption>
+            <img src="images/pizzas/chicken-tikka1.jpeg" width="100%" height="80%">
+            <p><span>CONTAINS:</span><br>Chicken Tikka, Red Onions, Mixed Peppers, Red Chilli & Mushrooms</p>
+          </figure>
+          <figure class="card">
+            <figcaption>PEPPERONI PASSION</figcaption>
+            <img src="images/pizzas/pepperoni-passion.jpeg" width="100%" height="80%">
+            <p><span>CONTAINS:</span><br>Beef Pepperoni & Mozzarella Cheese</p>
+          </figure>
+          <figure class="card">
+            <figcaption>HAWAIIAN</figcaption>
+            <img src="images/pizzas/hawaiian.jpeg" width="100%" height="80%">
+            <p><span>CONTAINS:</span><br>Beef Ham & Pineapples</p>
+          </figure>
+          <figure class="card">
+            <figcaption>VEGGIE DELUXE</figcaption>
+            <img src="images/pizzas/veggie-deluxe.jpeg" width="100%" height="80%">
+            <p><span>CONTAINS:</span><br>Red Onions, Mixed Peppers, Mushrooms, Black OLives & Fresh Tomatoes</p>
+          </figure>
+          <figure class="card">
+            <figcaption>CHICKEN BALI</figcaption>
+            <img src="images/pizzas/chicken-bali.jpeg" width="100%" height="80%">
+            <p><span>CONTAINS:</span><br>Grilled Chicken, Pineapples, Mushrooms & Red Chilli</p>
+          </figure>
+          <figure class="card">
+            <figcaption>REGINA</figcaption>
+            <img src="images/pizzas/regina.jpeg" width="100%" height="80%">
+            <p><span>CONTAINS:</span><br>Beef Ham & Mushrooms</p>
+          </figure>
+          <figure class="card">
+            <figcaption>PERI-PERI CHICKEN</figcaption>
+            <img src="images/pizzas/periperi-chicken.jpg" width="100%" height="80%">
+            <p><span>CONTAINS:</span><br>Grilled Chicken, Pineapples, Fresh Tomatoes, Red Chilli & Hot Peri Peri Sauce</p>
+          </figure>
+          <figure class="card">
+            <figcaption>SWAHILI CHICKEN</figcaption>
+            <img src="images/pizzas/swahili-chicken.jpeg" width="100%" height="80%">
+            <p><span>CONTAINS: </span><br>Swahili Chicken, Coconut, Pineapples, Sweet Corn & Red Chilli</p>
+          </figure>
+        </div>
       </div>
     </div>
   </body>

@@ -57,19 +57,22 @@ $(document).ready(function(){
       var inputtedSize=$("input:radio[name=size]:checked").val();
       var inputtedCrust=$(".crust-type").val();
       var inputtedFlavor=$(".flavor-type").val();
-
-      var inputtedToppings=new Array();
-      $("input[name=toppings]:checked").each(function(){
-        inputtedToppings.push(this.value);
-      });
-
-      var inputtedQuantity=$("#number-pizzas").val();
+      var inputToppings=[];
+      $.each($("input[name='toppings']:checked"),function(){
+        inputToppings.push($(this).val());
+      })
+      // var inputtedToppings=new Array();
+      // $("input[name=toppings]:checked").each(function(){
+      //   inputtedToppings.push(this.value);
+      // });
+      console.log(inputToppings)
+      var inputtedQuantity=parseInt($("#number-pizzas").val());
       var choseDelivery=$("input:radio[name=delivery]:checked").val();
 
-      var newPizza=new Pizza(inputtedSize,inputtedCrust,inputtedFlavor,inputtedToppings,inputtedQuantity,choseDelivery)
+      var newPizza=new Pizza(inputtedSize,inputtedCrust,inputtedFlavor,inputToppings,inputtedQuantity,choseDelivery)
       var toppingsCost=0;
-      inputtedToppings.forEach(function(inputtedTopping){
-        toppingsCost+=parseInt(toppingsPrices.inputtedTopping)
+      inputToppings.forEach(function(inputTopping){
+        toppingsCost+=parseInt(toppingsPrices.inputTopping)
       });
       console.log(toppingsCost)
       // for (var index=0;index<inputtedToppings.length;index+=1){

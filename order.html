@@ -59,7 +59,7 @@
           <br>
           <div id="toppings">
             <div class="card">
-              <p class="card-header">CHOOSE YOUR TOPPINGS HERE</p>
+              <p class="card-header">CHOOSE YOUR TOPPINGS HERE<br><span class="note">Check our charges to toppings <a>here</a></span></p>
               <div class="card-body form-check">
                 <div class="form-check">
                   <input type="checkbox" id="topping1" name="onions" class="form-check-input" >
@@ -135,7 +135,7 @@
             <input type="reset" class="btn btn-outline-danger" value="Reset">
           </div>
           <div class="delivery card">
-            <p>Do you want your pizza to be delivered to your doorstep?<br><span>You will incur an extra charge KSH 100</span></p>
+            <p>Do you want your pizza to be delivered to your doorstep?<br><span class="note">You will incur an extra charge KSH 100</span></p>
             <div class="form-check-inline">
               <input type="radio" id="delivery-yes" name="delivery" value="delivery-yes" class="form-check-input" required>
               <label for="delivery-yes" class="form-check-label">YES</label>
@@ -148,7 +148,7 @@
           </div>
           <div class="card" id="charges">
             <p>THANK YOU FOR PLACING AN ORDER WITH US!<br>ONE OF OUR ATTENDANTS WILL CALL YOU WHEN YOUR PIZZA IS READY!</p>
-            <p>Your TOTAL CHARGES are <span id="cost"></span</p>
+            <p>Your TOTAL CHARGES are: <br> <span id="cost"></span</p>
           </div>
         </form>
       </div>
@@ -210,22 +210,57 @@
       </div>
     </div>
     <div class="container-fluid">
-      <div class="col-md-4">
+      <div class="row">
+      <div class="col-md-3">
         <div class="card" id="hours">
-          <p>WORKING HOURS</p>
+          <div class="card-header">
+            <h3>WORKING HOURS</h3>
+          </div>
           <ul>
-            We are open for the following hours:
+            We are open during the following hours:
+            <br>
             <li>Mon-Fri: 8:00am-9:00pm</li>
             <li>Sat: 7:00am-11:00pm</li>
             <li>Sun: 10:00am-7:00pm</li>
           </ul>
         </div>
-        <br>
-        <div class="card col-md-4" id="pizza-chart">
-          <p class="card-header">A chart to help you pick out pizza sizes</p>
-          <img src="images/pizza-sizes.png" alt="" width="100px" height="120px" id="chart-img">
+      </div>
+      <br>
+      <div class="card col-md-9" id="toppings">
+        <div class="card-header">
+          <h3>TOPPINGS</h3>
+        </div>
+        <div class="row">
+          <ul class="col-9 cost-toppings">
+            <p>KSH 100 on ALL PIZZAS</p>
+            <div class="row">
+              <div class="col-6">
+                <li>Beef Bacon</li>
+                <li>Jalapeno Peppers</li>
+                <li>Pepperoni</li>
+                <li>Beef Ham</li>
+                <li>Beef</li>
+              </div>
+              <div class="col-6">
+                <li>Italian Sausage</li>
+                <li>Grilled Chicken</li>
+                <li>Steak</li>
+                <li>Fresh Mushrooms</li>
+                <li>Extra Cheese</li>
+              </div>
+            </div>
+          </ul>
+          <ul class="col-3 cost-toppings">
+              <p> KSH 50 on ALL PIZZAS</p>
+              <li>Onions</li>
+              <li>Diced Tomatoes</li>
+              <li>Mixed Peppers</li>
+              <li>Black Olives</li>
+              <li>Pineapples</li>
+          </ul>
         </div>
       </div>
+    </div>
     </div>
   </body>
 </html>

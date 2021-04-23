@@ -43,3 +43,16 @@ a:hover{
   text-align:center;
   font-size:80%;
 }
+#contact-location{
+  background-color:#dc3545;
+  color:white;
+  text-align:center;
+  align-content:center;
+}
+#subscribe-form{
+  padding:10px;
+  background-color:#8c1924;
+}
+#label-form{
+  text-align:center;
+}

@@ -41,7 +41,7 @@ figcaption{
   font-size:80%;
   color:red;
 }
-#toppings{
+#toppings-choose{
   text-align:center;
 }
 .cost-toppings li{
@@ -65,4 +65,11 @@ figure{
 }
 #menu{
   text-align:center;
+}
+figure:hover{
+  border:2px solid #dc3545;
+}
+.order-details{
+  text-align:center;
+  display:none;
 }

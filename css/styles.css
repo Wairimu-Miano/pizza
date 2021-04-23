@@ -9,3 +9,9 @@
   font-weight:bold;
   font-size:120%;
 }
+#main{
+  background-image:url("../images/img2.jpg");
+  background-size:cover;
+  padding:100px;
+  text-align:center;
+}

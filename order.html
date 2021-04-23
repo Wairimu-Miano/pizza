@@ -17,123 +17,121 @@
       <div class="col-md-8" id="pizza-form">
         <h2>PLACE YOUR ORDER DETAILS BELOW</h2>
         <form class="pizza-old card">
-          <div id="size">
-            <p>PIZZA SIZE:</p>
-            <div class="form-check-inline">
-              <input type="radio" id="small" name="size" value="small" class="form-check-input" required>
-              <label for="small" class="form-check-label">Small</label>
+          <div class="new-pizza">
+            <div id="size">
+              <p>PIZZA SIZE:</p>
+              <div class="form-check-inline">
+                <input type="radio" id="small" name="size" value="small" class="form-check-input" required>
+                <label for="small" class="form-check-label">Small</label>
+              </div>
+              <div class="form-check-inline">
+                <input type="radio" id="medium" name="size" value="medium" class="form-check-input" required>
+                <label for="medium" class="form-check-label">Medium</label>
+              </div>
+              <div class="form-check-inline">
+                <input type="radio" id="large" name="size" value="large" class="form-check-input" required>
+                <label for="large" class="form-check-label">Large</label>
+              </div>
             </div>
-            <div class="form-check-inline">
-              <input type="radio" id="medium" name="size" value="medium" class="form-check-input" required>
-              <label for="medium" class="form-check-label">Medium</label>
+            <br>
+            <div id="crust">
+              <p>CRUST TYPE:<br><span class="note">You can view the menu <a>here</a></span></p>
+              <select class="form-select form-select-sm crust-type" required>
+                <option>CRUSTY</option>
+                <option>STUFFED</option>
+                <option>GLUTTEN-FREE</option>
+              </select>
             </div>
-            <div class="form-check-inline">
-              <input type="radio" id="large" name="size" value="large" class="form-check-input" required>
-              <label for="large" class="form-check-label">Large</label>
+            <div id="flavor">
+              <p>CHOOSE A FLAVOR:</p>
+              <select class="form-select form-select-sm flavor-type" required>
+                <option>MEAT DELUXE</option>
+                <option>BBQ CHICKEN</option>
+                <option>CHICKEN TIKKA</option>
+                <option>PEPPERONI PASSION</option>
+                <option>HAWAIIAN</option>
+                <option>VEGGIE DELUXE</option>
+                <option>CHICKEN BALI</option>
+                <option>REGINA</option>
+                <option>PERI-PERI CHICKEN</option>
+                <option>SWAHILI CHICKEN</option>
+              </select>
             </div>
-          </div>
-          <div id="crust">
-            <p>CRUST TYPE:</p>
-            <select class="form-select form-select-sm crust-type">
-              <option selected>Select one:</option>
-              <option>CRUSTY</option>
-              <option>STUFFED</option>
-              <option>GLUTTEN-FREE</option>
-            </select>
-          </div>
-          <div id="flavor">
-            <p>CHOOSE A FLAVOR:</p>
-            <select class="form-select form-select-sm flavor-type">
-              <option>MEAT DELUXE</option>
-              <option>BBQ CHICKEN</option>
-              <option>CHICKEN TIKKA</option>
-              <option>PEPPERONI PASSION</option>
-              <option>HAWAIIAN</option>
-              <option>VEGGIE DELUXE</option>
-              <option>CHICKEN BALI</option>
-              <option>REGINA</option>
-              <option>PERI-PERI CHICKEN</option>
-              <option>SWAHILI CHICKEN</option>
-            </select>
-          </div>
-          <br>
-          <div id="toppings">
-            <div class="card">
-              <p class="card-header">CHOOSE YOUR TOPPINGS HERE<br><span class="note">Check our charges to toppings <a>here</a></span></p>
-              <div class="card-body form-check">
-                <div class="form-check">
-                  <input type="checkbox" id="topping1" name="onions" class="form-check-input" >
-                  <label for="topping1" class="form-check-label">Onions</label>
-                </div>
-                <div class="form-check">
-                  <input type="checkbox" id="topping2" name="tomatoes" class="form-check-input">
-                  <label for="topping2" class="form-check-label">Diced Tomatoes</label>
-                </div>
-                <div class="form-check">
-                  <input type="checkbox" id="topping3" name="Peppers" class="form-check-input">
-                  <label for="topping3" class="form-check-label">Mixed Peppers</label>
-                </div>
-                <div class="form-check">
-                  <input type="checkbox" id="topping4" name="olives" class="form-check-input">
-                  <label for="topping4" class="form-check-label">Black Olives</label>
-                </div>
-                <div class="form-check">
-                  <input type="checkbox" id="topping5" name="pineapples" class="form-check-input">
-                  <label for="topping5" class="form-check-label">Pineapples</label>
-                </div>
-                <div class="form-check">
-                  <input type="checkbox" id="topping6" name="Cheese" class="form-check-input">
-                  <label for="topping6" class="form-check-label">Extra Cheese</label>
-                </div>
-                <div class="form-check">
-                  <input type="checkbox" id="topping7" name="mushrooms" class="form-check-input">
-                  <label for="topping7" class="form-check-label">Fresh Mushrooms</label>
-                </div>
-                <div class="form-check">
-                  <input type="checkbox" id="topping8" name="steak" class="form-check-input">
-                  <label for="topping8" class="form-check-label">Steak</label>
-                </div>
-                <div class="form-check">
-                  <input type="checkbox" id="topping9" name="chicken" class="form-check-input" >
-                  <label for="topping9" class="form-check-label">Grilled Chicken</label>
-                </div>
-                <div class="form-check">
-                  <input type="checkbox" id="topping10" name="sausage" class="form-check-input">
-                  <label for="topping10" class="form-check-label">Italian Sausages</label>
-                </div>
-                <div class="form-check">
-                  <input type="checkbox" id="topping11" name="beef" class="form-check-input">
-                  <label for="topping11" class="form-check-label">Beef</label>
-                </div>
-                <div class="form-check">
-                  <input type="checkbox" id="topping12" name="ham" class="form-check-input">
-                  <label for="topping12" class="form-check-label">Beef Ham</label>
-                </div>
-                <div class="form-check">
-                  <input type="checkbox" id="topping13" name="jalapeno" class="form-check-input">
-                  <label for="topping13" class="form-check-label">Jalapeno Peppers</label>
-                </div>
-                <div class="form-check">
-                  <input type="checkbox" id="topping14" name="bacon" class="form-check-input">
-                  <label for="topping14" class="form-check-label">Beef Bacon</label>
-                </div>
-                <div class="form-check">
-                  <input type="checkbox" id="topping15" name="pepperoni" class="form-check-input">
-                  <label for="topping15" class="form-check-label">Pepperoni</label>
+            <br>
+            <div id="quantity">
+              <p>HOW MANY PIZZAS:</p>
+              <input id="number-pizzas" type="number" class="form-control" placeholder="How many?" required>
+            </div>
+            <br>
+            <div id="toppings-choose">
+              <div class="card">
+                <p class="card-header">CHOOSE YOUR TOPPINGS HERE<br><span class="note">Check our charges to toppings <a>here</a></span></p>
+                <div class="card-body form-check">
+                  <div class="form-check">
+                    <input type="checkbox" id="topping1" name="toppings" class="form-check-input" >
+                    <label for="topping1" class="form-check-label">Onions</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" id="topping2" name="toppings" class="form-check-input">
+                    <label for="topping2" class="form-check-label">Diced Tomatoes</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" id="topping3" name="toppings" class="form-check-input">
+                    <label for="topping3" class="form-check-label">Mixed Peppers</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" id="topping4" name="toppings" class="form-check-input">
+                    <label for="topping4" class="form-check-label">Black Olives</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" id="topping5" name="toppings" class="form-check-input">
+                    <label for="topping5" class="form-check-label">Pineapples</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" id="topping6" name="toppings" class="form-check-input">
+                    <label for="topping6" class="form-check-label">Extra Cheese</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" id="topping7" name="toppings" class="form-check-input">
+                    <label for="topping7" class="form-check-label">Fresh Mushrooms</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" id="topping8" name="toppings" class="form-check-input">
+                    <label for="topping8" class="form-check-label">Steak</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" id="topping9" name="toppings" class="form-check-input" >
+                    <label for="topping9" class="form-check-label">Grilled Chicken</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" id="topping10" name="toppings" class="form-check-input">
+                    <label for="topping10" class="form-check-label">Italian Sausages</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" id="topping11" name="toppings" class="form-check-input">
+                    <label for="topping11" class="form-check-label">Beef</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" id="topping12" name="toppings" class="form-check-input">
+                    <label for="topping12" class="form-check-label">Beef Ham</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" id="topping13" name="toppings" class="form-check-input">
+                    <label for="topping13" class="form-check-label">Jalapeno Peppers</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" id="topping14" name="toppings" class="form-check-input">
+                    <label for="topping14" class="form-check-label">Beef Bacon</label>
+                  </div>
+                  <div class="form-check">
+                    <input type="checkbox" id="topping15" name="toppings" class="form-check-input">
+                    <label for="topping15" class="form-check-label">Pepperoni</label>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-          <div id="quantity">
-            <p>HOW MANY PIZZAS:</p>
-            <input id="number-pizzas" type="number" class="form-control" placeholder="How many?">
-          </div>
           <br>
-          <div class="d-grid gap-3 d-md-block">
-            <button type="button" class="btn btn-outline-danger" id="add-order">Add an Order</button>
-            <input type="submit" class="btn btn-outline-danger"  id="submit" value="Submit">
-            <input type="reset" class="btn btn-outline-danger" value="Reset">
-          </div>
           <div class="delivery card">
             <p>Do you want your pizza to be delivered to your doorstep?<br><span class="note">You will incur an extra charge KSH 100</span></p>
             <div class="form-check-inline">
@@ -146,6 +144,12 @@
             </div>
             <p>Delivery takes an average of 30mins from your nearest branch</p>
           </div>
+          <br>
+          <div class="d-grid gap-3 d-md-block">
+            <input type="submit" class="btn btn-outline-danger"  id="submit" value="Submit">
+            <input type="reset" class="btn btn-outline-danger" value="Reset">
+          </div>
+          <br>
           <div class="card" id="charges">
             <p>THANK YOU FOR PLACING AN ORDER WITH US!<br>ONE OF OUR ATTENDANTS WILL CALL YOU WHEN YOUR PIZZA IS READY!</p>
             <p>Your TOTAL CHARGES are: <br> <span id="cost"></span</p>
@@ -175,9 +179,14 @@
     <div class="order-details container-fluid">
       <h3>ORDER SUMMARY</h3>
       <p>Here are the details of your ORDERS:</p>
-      <ul id="order-details">
-        
-      </ul>
+      <div id="order-details">
+        <p>Pizza Size: <span id="order-size"></span></p>
+        <p>Pizza Crust: <span id="order-crust"></span></p>
+        <p>Pizza Flavor: <span id="order-flavor"></span></p>
+        <p>Pizza Toppings: <span id="order-toppings"></span></p>
+        <p>Number of Pizzas: <span id="order-quantity"></span></p>
+        <p>Delivery Location: <span id="delivery-location"></span></p>
+      </div>
     </div>
     <div class="container-fluid" id="contacts">
       <h3>CONTACTS</h3>

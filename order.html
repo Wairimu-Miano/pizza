@@ -14,8 +14,8 @@
       <p style="text-decoration:underline;">Beep Beep, Hot Pizza Coming Through!</p>
     </div>
     <div class="container-fluid row">
-      <div class="col-md-7" id="pizza-form">
-        <h2>Place your order details below</h2>
+      <div class="col-md-8" id="pizza-form">
+        <h2>PLACE YOUR ORDER DETAILS BELOW</h2>
         <form class="pizza-old card">
           <div id="size">
             <p>PIZZA SIZE:</p>
@@ -134,30 +134,31 @@
             <input type="submit" class="btn btn-outline-danger"  id="submit" value="Submit">
             <input type="reset" class="btn btn-outline-danger" value="Reset">
           </div>
+          <div class="delivery card">
+            <p>Do you want your pizza to be delivered to your doorstep?<br><span>You will incur an extra charge KSH 100</span></p>
+            <div class="form-check-inline">
+              <input type="radio" id="delivery-yes" name="delivery" value="delivery-yes" class="form-check-input" required>
+              <label for="delivery-yes" class="form-check-label">YES</label>
+            </div>
+            <div class="form-check-inline">
+              <input type="radio" id="delivery-no" name="delivery" value="delivery-no" class="form-check-input" required>
+              <label for="delivery-no" class="form-check-label">NO</label>
+            </div>
+            <p>Delivery takes an average of 30mins from your nearest branch</p>
+          </div>
+          <div class="card" id="charges">
+            <p>THANK YOU FOR PLACING AN ORDER WITH US!<br>ONE OF OUR ATTENDANTS WILL CALL YOU WHEN YOUR PIZZA IS READY!</p>
+            <p>Your TOTAL CHARGES are <span id="cost"></span</p>
+          </div>
         </form>
       </div>
-      <div class="col-md-2">
-        <div class="card" id="hours">
-          <p>WORKING HOURS</p>
-          <ul>
-            We are open for the following hours:
-            <li>Mon-Fri: 8:00am-9:00pm</li>
-            <li>Sat: 7:00am-11:00pm</li>
-            <li>Sun: 10:00am-7:00pm</li>
-          </ul>
-        </div>
-        <br>
-        <div class="card" id="pizza-chart">
-          <p class="card-header">A chart to help you pick out pizza sizes</p>
-          <img src="images/pizza-sizes.png" alt="" width="100px" height="120px" id="chart-img">
-        </div>
-      </div>
-      <div class="col-md-3" id="menu">
+
+      <div class="col-md-4" id="menu">
         <h2>OUR MENU</h2>
         <div class="card-deck" id="menu-list">
-          <figure>
+          <figure class="card">
             <figcaption>MEAT DELUXE</figcaption>
-            <img src="images/pizzas/bbq-chicken.jpeg" width="100%" height="80%">
+            <img src="images/pizzas/meat-deluxe.jpeg" width="100%" height="80%">
             <p><span>CONTAINS:</span><br>BBQ Steak Strips, Italian Sausage, Pepperoni, Fresh Mushrooms, Onions & Mozzarella Cheese</p>
           </figure>
           <figure class="card">
@@ -205,6 +206,24 @@
             <img src="images/pizzas/swahili-chicken.jpeg" width="100%" height="80%">
             <p><span>CONTAINS: </span><br>Swahili Chicken, Coconut, Pineapples, Sweet Corn & Red Chilli</p>
           </figure>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="col-md-4">
+        <div class="card" id="hours">
+          <p>WORKING HOURS</p>
+          <ul>
+            We are open for the following hours:
+            <li>Mon-Fri: 8:00am-9:00pm</li>
+            <li>Sat: 7:00am-11:00pm</li>
+            <li>Sun: 10:00am-7:00pm</li>
+          </ul>
+        </div>
+        <br>
+        <div class="card col-md-4" id="pizza-chart">
+          <p class="card-header">A chart to help you pick out pizza sizes</p>
+          <img src="images/pizza-sizes.png" alt="" width="100px" height="120px" id="chart-img">
         </div>
       </div>
     </div>

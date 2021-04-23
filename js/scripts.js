@@ -1,18 +1,25 @@
 //ORDER DETAILS
 
 //BACK END LOGIC
-function Pizza(size,crust,flavor,toppings,quantity){
+function Pizza(delivery){
+  this.orders=[];
+  this.delivery=delivery;
+};
+function Order(size,crust,flavor,toppings,quantity){
   this.size=size;
   this.crust=crust;
   this.flavor=flavor;
-  this.toppings=[];
+  this.toppings=toppings;
   this.quantity=quantity;
+}
+Order.prototype.fullOrder=function(){
+  return this.size + ", " + this.crust + ", " + this.flavor + ", " + this.toppings + ", " + this.quantity;
 }
 var sizes={
   Small:500,
   Medium:800,
-  Large:1000;
-}
+  Large:1000
+};
 var toppings={
   topping1:50,
   topping2:50,
@@ -30,19 +37,26 @@ var toppings={
   topping14:100,
   topping15:100,
 }
-Pizza.prototype.fullOrderDetails=function(){
-  return "PIZZA SIZE: " + this.size + "\n PIZZA CRUST: " + this.crust + "\n PIZZA FLAVOR: " + this.flavor + "\n PIZZA TOPPINGS: " + this.toppings + "\n NUMBER OF PIZZAS: " + this.quantity 
-}
 //USER INTERFACE
 $(document).ready(function(){
   $("#submit").click(function(event){
     event.preventDefault();
-    var inputtedSize=$("input:radio[name=size]:checked").val();
-    var inputtedCrust=$(".crust-type").val();
-    var inputtedFlavor=$(".flavor-type").val();
-    var inputtedToppings=$("input[type=checkbox]:checked").val();
-    var inputtedQuantity=$("#number-pizzas").val();
-    var newPizza=Pizza(inputtedSize,inputtedCrust,inputtedFlavor,inputtedToppings,inputtedQuantity);
-
+    var choseDelivery=$("input:radio[name=delivery]:checked").val();
+    var newPizza=new Pizza(choseDelivery)
+    $(".new-pizza").each(function(){
+      var inputtedSize=$("input:radio[name=size]:checked").val();
+      var inputtedCrust=$(".crust-type").val();
+      var inputtedFlavor=$(".flavor-type").val();
+      var inputtedToppings=new Array();
+      $("input[name=toppings]:checked").each(function(){
+        inputtedToppings.push(this.value);
+      });
+      var inputtedQuantity=$("#number-pizzas").val();
+      var newOrder=new Order(inputtedSize,inputtedCrust,inputtedFlavor,inputtedToppings,inputtedQuantity);
+      newPizza.orders.push(newOrder);
+      newPizza.orders.forEach(function(order){
+        $("ul#order-details").append("<li>PIZZA SIZE: " +order.size+"<br>PIZZA CRUST: " + order.crust + "<br>PIZZA FLAVOR " + order.flavor + "<br>PIZZA TOPPINGS: " + order.toppings + "<br>NUMBER OF PIZZAS: " +order.quantity + "</li>" )
+      });
+    });
   })
 })

@@ -1,6 +1,12 @@
 #logo{
   border-radius:50%;
 }
+a{
+  color:#dc3545;
+}
+a:hover{
+  text-decoration:underline;
+}
 #motto{
   border-bottom:3px solid #dc3545;
   text-align:center;

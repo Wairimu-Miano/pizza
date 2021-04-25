@@ -13,6 +13,11 @@ var sizes={
   Medium:800,
   Large:1000
 };
+function Location(street,constituency,area){
+  this.street=street;
+  this.constituency=constituency;
+  this.area=area;
+}
 // var toppingsCheap={
 //   topping:["Onions","Diced Tomatoes","Black OLives"]
 //   prices:50
@@ -57,34 +62,30 @@ $(document).ready(function(){
       var inputtedSize=$("input:radio[name=size]:checked").val();
       var inputtedCrust=$(".crust-type").val();
       var inputtedFlavor=$(".flavor-type").val();
-      var inputToppings=[];
+      var inputtedToppings=[];
       $.each($("input[name='toppings']:checked"),function(){
-        inputToppings.push($(this).val());
+        inputtedToppings.push($(this).val());
       })
-      // var inputtedToppings=new Array();
-      // $("input[name=toppings]:checked").each(function(){
-      //   inputtedToppings.push(this.value);
-      // });
-      console.log(inputToppings)
       var inputtedQuantity=parseInt($("#number-pizzas").val());
       var choseDelivery=$("input:radio[name=delivery]:checked").val();
-
-      var newPizza=new Pizza(inputtedSize,inputtedCrust,inputtedFlavor,inputToppings,inputtedQuantity,choseDelivery)
+      var newPizza=new Pizza(inputtedSize,inputtedCrust,inputtedFlavor,inputtedToppings,inputtedQuantity,choseDelivery)
       var toppingsCost=0;
-      inputToppings.forEach(function(inputTopping){
-        toppingsCost+=parseInt(toppingsPrices.inputTopping)
+      inputtedToppings.forEach(function(inputtedTopping){
+        toppingsCost+=parseInt(toppingsPrices.inputtedTopping)
       });
-      console.log(toppingsCost)
-      // for (var index=0;index<inputtedToppings.length;index+=1){
-      //   toppingsCost+=toppingsPrices.["inputtedToppings"]
-      //   return toppingsCost;
-      // }
-      if (choseDelivery==="YES"){
+
+      if (choseDelivery==="delivery-yes"){
+        var inputtedStreet=$("#street").val();
+        var inputtedConstituency=$("#constituency").val();
+        var inputtedArea=$("#area").val()
+        var newLocation=new Location(inputtedStreet,inputtedConstituency,inputtedArea)
+        $("span#delivery-location").text(newLocation.area)
         var pizzaCost= sizes.inputtedSize*inputtedQuantity + deliveryCost + toppingsCost*inputtedQuantity;
+
       } else {
         var pizzaCost= sizes.inputtedSize + toppingsCost;
       }
-      $("#order-details").show();
+      $(".order-details").show();
       $("span#order-size").text(newPizza.size);
       $("span#order-crust").text(newPizza.crust);
       $("span#order-flavor").text(newPizza.flavor);
@@ -103,20 +104,9 @@ $(document).ready(function(){
 //   Medium:800,
 //   Large:1000
 // };
-// var toppings={
-//   topping1:50,
-//   topping2:50,
-//   topping3:50,
-//   topping4:50,
-//   topping5:50,
-//   topping6:100,
-//   topping7:100,
-//   topping8:100,
-//   topping9:100,
-//   topping10:100,
-//   topping11:100,
-//   topping12:100,
-//   topping13:100,
-//   topping14:100,
-//   topping15:100,
+
+
+// for (var index=0;index<inputtedToppings.length;index+=1){
+//   toppingsCost+=toppingsPrices["inputtedToppings"]
 // }
+// console.log(toppingsCost)

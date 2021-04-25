@@ -10,6 +10,7 @@ a:hover{
 .nav-item{
   font-size:110%;
   color:white;
+  font-weight:bold;
 }
 .nav-link{
   color:white;
@@ -47,11 +48,21 @@ a:hover{
 #offers{
   text-align:center;
   padding-top:20px;
+  padding-bottom:20px;
 }
 #about{
   text-align:center;
   padding-top:20px;
+  width:100%;
+  background-image:url("../images/pizza9.jpg");
+  background-size:cover;
+  padding:50px;
+  color:white;
+}
+#about p{
   width:90%;
+  margin-left:auto;
+  margin-right:auto;
 }
 #social-icons{
   text-align:center;

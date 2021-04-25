@@ -18,7 +18,9 @@ function Location(street,constituency,area){
   this.constituency=constituency;
   this.area=area;
 }
-
+Location.prototype.fullLocation=function(){
+  return this.street + ", " + this.area + ", " + this.constituency;
+}
 var toppingsCheap={
   name:['Onions','Diced Tomatoes','Mixed Peppers','Black Olives','Pineapples'],
   price:50
@@ -28,6 +30,8 @@ var toppingsExpensive={
   price:100
 }
 var deliveryCost=100;
+
+
 //USER INTERFACE
 $(document).ready(function(){
   $("form.pizza-old").submit(function(event){
@@ -64,13 +68,15 @@ $(document).ready(function(){
         var inputtedConstituency=$("#constituency").val();
         var inputtedArea=$("#area").val()
         var newLocation=new Location(inputtedStreet,inputtedConstituency,inputtedArea)
-        $("span#delivery-location").text(newLocation.area)
+        $("span#delivery-location").text(fullLocation())
         var pizzaCost= sizes[inputtedSize]*inputtedQuantity + deliveryCost + toppingsCost*inputtedQuantity;
         $("span#total-cost").text("KSH. " + pizzaCost);
+        alert("Thank you for ordering with us, your pizza will be delivered to " + fullLocation() + " shortly")
       } else {
         $("span#delivery-location").text("None_Pick-Up")
         var pizzaCost= sizes[inputtedSize]*inputtedQuantity + toppingsCost*inputtedQuantity;
-        $("span#total-cost").text(pizzaCost);
+        $("span#total-cost").text("KSH. " + pizzaCost);
+        alert("Thank you for ordering with us, one of our attendants will contact you to collect your pizza")
       }
       $("#charges").slideDown();
       $(".order-details").show();

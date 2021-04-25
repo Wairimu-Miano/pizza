@@ -68,10 +68,10 @@ $(document).ready(function(){
         var inputtedConstituency=$("#constituency").val();
         var inputtedArea=$("#area").val()
         var newLocation=new Location(inputtedStreet,inputtedConstituency,inputtedArea)
-        $("span#delivery-location").text(fullLocation())
+        $("span#delivery-location").text(newLocation.fullLocation())
         var pizzaCost= sizes[inputtedSize]*inputtedQuantity + deliveryCost + toppingsCost*inputtedQuantity;
         $("span#total-cost").text("KSH. " + pizzaCost);
-        alert("Thank you for ordering with us, your pizza will be delivered to " + fullLocation() + " shortly")
+        alert("Thank you for ordering with us, your pizza will be delivered to " + newLocation.fullLocation() + " shortly")
       } else {
         $("span#delivery-location").text("None_Pick-Up")
         var pizzaCost= sizes[inputtedSize]*inputtedQuantity + toppingsCost*inputtedQuantity;

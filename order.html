@@ -143,14 +143,14 @@
               <label for="delivery-no" class="form-check-label">NO</label>
             </div>
             <p>Delivery takes an average of 30mins from your nearest branch</p>
-            <div class="input-location form-group">
-              <p>Kindly enter the delivery location details</p>
+            <div class="form-group" id="input-location">
+              <p>If you selected yes, kindly enter the delivery location details</p>
               <label for="street">Your Street</label>
-              <input type="text" id="street" class="form-control" placeholder="Street" required>
+              <input type="text" id="street" class="form-control" placeholder="Street">
               <label for="constituency">Constituency</label>
-              <input type="text" id="constituency" class="form-control" placeholder="Constituency" required>
+              <input type="text" id="constituency" class="form-control" placeholder="Constituency" >
               <label for="area">General Area Name</label>
-              <input id="area" type="text" class="form-control" placeholder="Area Name" required>
+              <input id="area" type="text" class="form-control" placeholder="Area Name">
             </div>
           </div>
           <br>
@@ -187,7 +187,7 @@
     </div>
     <div class="order-details container-fluid">
       <h3>ORDER SUMMARY</h3>
-      <p>Here are the details of your ORDERS:</p>
+      <p>Here are the details of your ORDER:</p>
       <div id="order-details">
         <p>Pizza Size: <span id="order-size"></span></p>
         <p>Pizza Crust: <span id="order-crust"></span></p>
@@ -195,6 +195,7 @@
         <p>Pizza Toppings: <span id="order-toppings"></span></p>
         <p>Number of Pizzas: <span id="order-quantity"></span></p>
         <p>Delivery Location: <span id="delivery-location"></span></p>
+        <p><strong>TOTAL CHARGES:<span id="total-cost"></span></strong></p>
       </div>
     </div>
     <div class="container-fluid" id="contacts">

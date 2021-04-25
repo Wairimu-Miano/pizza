@@ -9,9 +9,9 @@ function Pizza(size,crust,flavor,toppings,quantity,delivery){
   this.delivery=delivery;
 };
 var sizes={
-  Small:500,
-  Medium:800,
-  Large:1000
+  small:500,
+  medium:800,
+  large:1000
 };
 function Location(street,constituency,area){
   this.street=street;
@@ -42,23 +42,6 @@ var toppingsExpensive={
   name:['Extra Cheese','Fresh Mushrooms','Steak','Grilled Chicken','Italian Sausages','Beef','Beef Ham','Jalapeno Peppers','Beef Bacon','Pepperoni'],
   price:100
 }
-var toppingsPrices={
-  "Onions":50,
-  "Diced Tomatoes":50,
-  "Mixed Peppers":50,
-  "Black Olives":50,
-  "Pineapples":50,
-  "Extra Cheese":100,
-  "Fresh Mushrooms":100,
-  "Steak":100,
-  "Grilled Chicken":100,
-  "Italian Sausages":100,
-  "Beef":100,
-  "Beef Ham":100,
-  "Jalapeno Peppers":100,
-  "Beef Bacon":100,
-  "Pepperoni":100,
-}
 var deliveryCost=100;
 //USER INTERFACE
 $(document).ready(function(){
@@ -77,20 +60,21 @@ $(document).ready(function(){
       var inputtedQuantity=parseInt($("#number-pizzas").val());
       var choseDelivery=$("input:radio[name=delivery]:checked").val();
       var newPizza=new Pizza(inputtedSize,inputtedCrust,inputtedFlavor,inputtedToppings,inputtedQuantity,choseDelivery)
+      //TOPPINGS COST
       var toppingsCost=0
       inputtedToppings.forEach(function(inputtedTopping){
-        // console.log(toppingsPrices.inputtedTopping)
-        // toppingsCost+=parseInt(toppingsPrices["inputtedTopping"])
-        if (toppingsCheap.includes(inputtedTopping)===true){
+        if (toppingsCheap['name'].includes(inputtedTopping)===true){
           var cost=toppingsCheap.price
-        } else if (toppingsExpensive.includes(inputtedTopping)===true){
+          toppingsCost+=cost
+        } else if (toppingsExpensive['name'].includes(inputtedTopping)===true){
           var cost=toppingsExpensive.price
+          toppingsCost+=cost
         } else{
           var cost=0;
+          toppingsCost+=cost
         }
-        toppingsCost+=cost
+
       });
-      console.log(toppingsCost)
       if (choseDelivery==="delivery-yes"){
         var inputtedStreet=$("#street").val();
         var inputtedConstituency=$("#constituency").val();
@@ -98,10 +82,14 @@ $(document).ready(function(){
         var newLocation=new Location(inputtedStreet,inputtedConstituency,inputtedArea)
         $("span#delivery-location").text(newLocation.area)
         var pizzaCost= sizes.inputtedSize*inputtedQuantity + deliveryCost + toppingsCost*inputtedQuantity;
+        $("span#total-cost").text(pizzaCost);
+        $("#cost").text(pizzaCost);
 
       } else {
         $("span#delivery-location").text("None_Pick-Up")
-        var pizzaCost= sizes.inputtedSize + toppingsCost;
+        var pizzaCost= sizes.inputtedSize*inputtedQuantity + toppingsCost*inputtedQuantity;
+        $("span#total-cost").text(pizzaCost);
+        $("#cost").text(pizzaCost);
       }
       $(".order-details").show();
       $("span#order-size").text(newPizza.size);
@@ -109,8 +97,8 @@ $(document).ready(function(){
       $("span#order-flavor").text(newPizza.flavor);
       $("span#order-toppings").text(newPizza.toppings);
       $("span#order-quantity").text(newPizza.quantity);
-      $("span#total-cost").text(pizzaCost);
-      $("#cost").text(pizzaCost);
+
+
     });
 
   })

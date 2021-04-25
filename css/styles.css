@@ -7,6 +7,16 @@ a{
 a:hover{
   text-decoration:underline;
 }
+.nav-item{
+  font-size:110%;
+  color:white;
+}
+.nav-link{
+  color:white;
+}
+.navbar-center{
+  left:50%;
+}
 #motto{
   border-bottom:3px solid #dc3545;
   text-align:center;
@@ -21,8 +31,8 @@ a:hover{
   padding:100px;
   text-align:center;
 }
-#main h1,h2{
-  font-size:300%;
+#main h1{
+  font-size:400%;
 }
 #order{
   color:white;
@@ -41,6 +51,7 @@ a:hover{
 #about{
   text-align:center;
   padding-top:20px;
+  width:90%;
 }
 #social-icons{
   text-align:center;
@@ -55,6 +66,7 @@ a:hover{
 #subscribe-form{
   padding:10px;
   background-color:#8c1924;
+  color:white;
 }
 #label-form{
   text-align:center;

@@ -25,9 +25,6 @@ h2{
   overflow:scroll;
   text-align:center;
 }
-figure p{
-  display:none;
-}
 figure img{
   border-radius:50%;
 }
@@ -59,12 +56,35 @@ figure{
   padding:2px;
   margin:15px;
 }
+figure .card-footer{
+  font-size:80%;
+}
+#menu .card-header, #toppings .card-header{
+  background-color:#dc3545;
+  color:white;
+  text-align:center;
+}
+header{
+  text-align:center;
+  color:#dc3545;
+}
+#priceTag{
+  text-align:center;
+  font-size:90%;
+}
 #offer-delivery{
   text-align:center;
   padding:30px;
+  font-weight:bold;
+  font-size:120%;
+}
+#offer-delivery:hover{
+  border:2px solid #dc3545;
 }
 #menu{
   text-align:center;
+  background-image:url("../images/pizza9.jpg");
+  background-size:contain;
 }
 figure:hover{
   border:2px solid #dc3545;
@@ -72,7 +92,17 @@ figure:hover{
 .order-details{
   text-align:center;
   display:none;
+  background-image:url("../images/pizza8.jpg");
+  font-weight:bold;
+  padding:20px;
 }
 #charges{
   display:none;
+}
+#content{
+  /* background-image:url("../images/pizza8.jpg");
+  background-size:cover; */
+}
+form{
+  background:transparent;
 }

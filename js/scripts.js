@@ -34,11 +34,19 @@ function Location(street,constituency,area){
 //   name:toppings,
 //   list:[toppingsCheap,toppingsExpensive]
 // }
+var toppingsCheap={
+  name:['Onions','Diced Tomatoes','Mixed Peppers','Black Olives','Pineapples'],
+  price:50
+}
+var toppingsExpensive={
+  name:['Extra Cheese','Fresh Mushrooms','Steak','Grilled Chicken','Italian Sausages','Beef','Beef Ham','Jalapeno Peppers','Beef Bacon','Pepperoni'],
+  price:100
+}
 var toppingsPrices={
   "Onions":50,
   "Diced Tomatoes":50,
   "Mixed Peppers":50,
-  "Black OLives":50,
+  "Black Olives":50,
   "Pineapples":50,
   "Extra Cheese":100,
   "Fresh Mushrooms":100,
@@ -69,11 +77,20 @@ $(document).ready(function(){
       var inputtedQuantity=parseInt($("#number-pizzas").val());
       var choseDelivery=$("input:radio[name=delivery]:checked").val();
       var newPizza=new Pizza(inputtedSize,inputtedCrust,inputtedFlavor,inputtedToppings,inputtedQuantity,choseDelivery)
-      var toppingsCost=0;
+      var toppingsCost=0
       inputtedToppings.forEach(function(inputtedTopping){
-        toppingsCost+=parseInt(toppingsPrices.inputtedTopping)
+        // console.log(toppingsPrices.inputtedTopping)
+        // toppingsCost+=parseInt(toppingsPrices["inputtedTopping"])
+        if (toppingsCheap.includes(inputtedTopping)===true){
+          var cost=toppingsCheap.price
+        } else if (toppingsExpensive.includes(inputtedTopping)===true){
+          var cost=toppingsExpensive.price
+        } else{
+          var cost=0;
+        }
+        toppingsCost+=cost
       });
-
+      console.log(toppingsCost)
       if (choseDelivery==="delivery-yes"){
         var inputtedStreet=$("#street").val();
         var inputtedConstituency=$("#constituency").val();
@@ -83,6 +100,7 @@ $(document).ready(function(){
         var pizzaCost= sizes.inputtedSize*inputtedQuantity + deliveryCost + toppingsCost*inputtedQuantity;
 
       } else {
+        $("span#delivery-location").text("None_Pick-Up")
         var pizzaCost= sizes.inputtedSize + toppingsCost;
       }
       $(".order-details").show();
@@ -91,6 +109,7 @@ $(document).ready(function(){
       $("span#order-flavor").text(newPizza.flavor);
       $("span#order-toppings").text(newPizza.toppings);
       $("span#order-quantity").text(newPizza.quantity);
+      $("span#total-cost").text(pizzaCost);
       $("#cost").text(pizzaCost);
     });
 

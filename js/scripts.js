@@ -67,13 +67,12 @@ $(document).ready(function(){
         $("span#delivery-location").text(newLocation.area)
         var pizzaCost= sizes[inputtedSize]*inputtedQuantity + deliveryCost + toppingsCost*inputtedQuantity;
         $("span#total-cost").text("KSH. " + pizzaCost);
-        $("#cost").text("KSH." + pizzaCost);
       } else {
         $("span#delivery-location").text("None_Pick-Up")
         var pizzaCost= sizes[inputtedSize]*inputtedQuantity + toppingsCost*inputtedQuantity;
         $("span#total-cost").text(pizzaCost);
-        $("#cost").text("KSH. " + pizzaCost);
       }
+      $("#charges").slideDown();
       $(".order-details").show();
       $("span#order-size").text(newPizza.size);
       $("span#order-crust").text(newPizza.crust);

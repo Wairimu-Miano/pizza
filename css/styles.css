@@ -54,10 +54,11 @@ a:hover{
   text-align:center;
   padding-top:20px;
   width:100%;
-  background-image:url("../images/pizza9.jpg");
-  background-size:cover;
   padding:50px;
-  color:white;
+  color:black;
+  font-weight:bold;
+  background-image:url("../images/pizzas/pizza10.jpg");
+  background-position:center;
 }
 #about p{
   width:90%;

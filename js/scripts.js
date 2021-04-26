@@ -95,5 +95,17 @@ $(document).ready(function(){
       }
       $("span#order-quantity").text(newPizza.quantity);
     });
+    function  resetFields(){
+      $("input:radio[name=size]:checked").val()
+      $(".crust-type"").val()
+      $(".flavor-type").val()
+      $("#number-pizzas").val()
+      $("input[name='toppings']:checked").val()
+      $("input:radio[name=delivery]:checked").val()
+      $("#street").val()
+      $("#constituency").val()
+      $("#area").val()
+
+    }
   });
 });

@@ -68,9 +68,12 @@ header{
   text-align:center;
   color:#dc3545;
 }
-#priceTag{
+#priceTag,#crustPrice{
   text-align:center;
   font-size:90%;
+  border-left:1px solid #dc3545;
+  margin-left:30px;
+  margin-right:10px;
 }
 #offer-delivery{
   text-align:center;
@@ -98,11 +101,4 @@ figure:hover{
 }
 #charges{
   display:none;
-}
-#content{
-  /* background-image:url("../images/pizza8.jpg");
-  background-size:cover; */
-}
-form{
-  background:transparent;
 }

@@ -37,11 +37,23 @@ var toppingsExpensive={
 var deliveryCost=100;
 
 
+
 //USER INTERFACE
 $(document).ready(function(){
+
+  //Only show delivery location if user selects yes
+  $("#delivery-yes").change(function(){
+    if ($("input:radio[name=delivery]:checked").val()==="delivery-yes"){
+      $("#input-location").show();
+    } else{
+      $("#input-location").hide();
+    }
+  });
+  $("#delivery-yes").trigger("change");
+
+  //Actions when form is submitted
   $("form.pizza-old").submit(function(event){
     event.preventDefault();
-
     $(".new-pizza").each(function(){
       var inputtedSize=$("input:radio[name=size]:checked").val();
       var inputtedCrust=$(".crust-type").val();

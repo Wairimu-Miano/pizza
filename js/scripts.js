@@ -9,9 +9,14 @@ function Pizza(size,crust,flavor,toppings,quantity,delivery){
   this.delivery=delivery;
 };
 var sizes={
-  small:500,
-  medium:800,
-  large:1000
+  small:450,
+  medium:750,
+  large:900
+}
+var crusts={
+  CRUSTY=50,
+  STUFFED=100,
+  GLUTTEN-FREE=150
 }
 function Location(street,constituency,area){
   this.street=street;

@@ -42,14 +42,20 @@ var deliveryCost=100;
 $(document).ready(function(){
 
   //Only show delivery location if user selects yes
-  $("#delivery-yes").change(function(){
+  $("input[name=delivery]").change(function(){
     if ($("input:radio[name=delivery]:checked").val()==="delivery-yes"){
       $("#input-location").show();
+      $('#street').attr('required', '')
+      $('#constituency').attr('required', '')
+      $('#area').attr('required', '')
     } else{
       $("#input-location").hide();
+      $('#street').removeAttr('required')
+      $('#constituency').removeAttr('required')
+      $('#area').removeAttr('required')
     }
   });
-  $("#delivery-yes").trigger("change");
+  $("input[name=delivery]").trigger("change");
 
   //Actions when form is submitted
   $("form.pizza-old").submit(function(event){

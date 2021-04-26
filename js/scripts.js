@@ -34,9 +34,6 @@ var toppingsExpensive={
   name:['Extra Cheese','Fresh Mushrooms','Steak','Grilled Chicken','Italian Sausages','Beef','Beef Ham','Jalapeno Peppers','Beef Bacon','Pepperoni'],
   price:100
 }
-var deliveryCost=100;
-
-
 
 //USER INTERFACE
 $(document).ready(function(){

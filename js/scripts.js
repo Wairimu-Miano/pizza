@@ -97,7 +97,7 @@ $(document).ready(function(){
     });
     function  resetFields(){
       $("input:radio[name=size]:checked").val()
-      $(".crust-type"").val()
+      $(".crust-type").val()
       $(".flavor-type").val()
       $("#number-pizzas").val()
       $("input[name='toppings']:checked").val()

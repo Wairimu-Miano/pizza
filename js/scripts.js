@@ -38,8 +38,14 @@ var toppingsExpensive={
 //USER INTERFACE
 $(document).ready(function(){
 
+  $("button#order").click(function(event){
+    event.preventDefault();
+    window.location.href='order.html';
+  })
+
   //Only show delivery location if user selects yes
-  $("input[name=delivery]").change(function(){
+  $("input[name=delivery]").change(function(event){
+    event.preventDefault();
     if ($("input:radio[name=delivery]:checked").val()==="delivery-yes"){
       $("#input-location").show();
       $('#street').attr('required', '')

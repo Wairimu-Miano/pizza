@@ -35,6 +35,8 @@ var toppingsExpensive={
   price:100
 }
 
+var deliveryCost=100;
+
 //USER INTERFACE
 $(document).ready(function(){
 
